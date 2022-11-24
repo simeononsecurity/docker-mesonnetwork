@@ -11,7 +11,7 @@ ENV TERM=xterm
 EXPOSE 443
 
 # Update Packages
-RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y install wget curl sudo
+RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y install wget curl sudo dumb-init
 
 #set up sudo user as mesonnetwork install requires sudo
 RUN adduser --disabled-password --gecos '' docker && adduser docker sudo
