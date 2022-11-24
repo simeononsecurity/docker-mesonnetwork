@@ -31,4 +31,4 @@ ENV cache_size='20'
 RUN sudo chmod +x ./dockersetup.sh && cat ./dockersetup.sh
 
 ENTRYPOINT [ "/bin/bash" ]
-CMD ["bash", "dockersetup.sh"]
+CMD ["/bin/bash", "dockersetup.sh"]
