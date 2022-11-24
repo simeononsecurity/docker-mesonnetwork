@@ -1,6 +1,7 @@
 mkdir /home
 mkdir /home/docker
 cd /home/docker
+mkdir /etc/init
 wget "${tarlocation}"
 tar -zxf meson_cdn-linux-amd64.tar.gz 
 rm -f meson_cdn-linux-amd64.tar.gz 
