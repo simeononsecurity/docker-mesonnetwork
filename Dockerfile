@@ -14,9 +14,8 @@ EXPOSE 443
 RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y install wget curl sudo
 
 #set up sudo user as mesonnetwork install requires sudo
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
-RUN echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | tee /etc/sudoers.d/$USER
-RUN echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | tee /etc/sudoers.d/docker
+RUN useradd --disabled-password -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER docker
 
 #copy installer script
