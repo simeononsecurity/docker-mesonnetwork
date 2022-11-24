@@ -18,7 +18,11 @@ ENV https_port="443"
 ENV cache_size='20'
 
 # Update Packages
-RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y install wget curl
+RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y install wget curl sudo
+
+#set up sudo user as mesonnetwork install requires sudo
+RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+USER docker
 
 #Install node software and run
 RUN chmod +x ./dockersetup.sh && cat ./dockersetup.sh
