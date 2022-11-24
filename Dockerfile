@@ -15,8 +15,8 @@ RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y install wget curl
 
 #set up sudo user as mesonnetwork install requires sudo
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
-RUN echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER
-RUN echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/docker
+RUN echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | tee /etc/sudoers.d/$USER
+RUN echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | tee /etc/sudoers.d/docker
 USER docker
 
 #copy installer script
