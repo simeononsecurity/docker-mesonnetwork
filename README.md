@@ -5,6 +5,7 @@ Dockerized Meson Network Node with amd64 support
 ---------------------------
 
 ### Docker Container Setup
+**Note:** Grab your token from the [Meson Network Dashboard](Meson Network Dashboard)
 Examples:
 ```bash
 docker volume create mesonnetworkdata
