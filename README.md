@@ -31,5 +31,5 @@ docker run \
     -e token="qwertyuiopasdfghjkl"
     -e cache_size="20" \
     -v mesonnetworkdata:/home/docker
-    --name mesonnetwork -P -td simeononsecurity/docker-mesonnetworklatest-arm64
+    --name mesonnetwork -P -td simeononsecurity/docker-mesonnetwork:latest-arm64
 ``` 
