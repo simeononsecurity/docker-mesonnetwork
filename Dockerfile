@@ -24,4 +24,4 @@ RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y install wget curl
 RUN chmod +x ./dockersetup.sh && cat ./dockersetup.sh
 
 ENTRYPOINT [ "/bin/bash" ]
-CMD ["/bin/bash", "./dockersetup.sh"]
+CMD ["/bin/bash", "dockersetup.sh"]
