@@ -23,7 +23,7 @@ COPY dockersetup.sh ./
 
 # Specify Node Environment Variables
 ENV tarlocation="https://staticassets.meson.network/public/meson_cdn/v3.1.18/meson_cdn-linux-amd64.tar.gz"
-ENV tar="meson_cdn-linux-amd64"
+ENV tar='meson_cdn-linux-amd64'
 ENV token=""
 ENV https_port="443"
 ENV cache_size='20'
