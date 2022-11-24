@@ -13,5 +13,5 @@ docker run \
     -e https_port="443" \
     -e token="qwertyuiopasdfghjkl"
     -e cache_size="20" \
-    --name diymiddleman -P -td simeononsecurity/docker-mesonnetwork:latest 
+    --name mesonnetwork -P -td simeononsecurity/docker-mesonnetwork:latest 
 ```  
