@@ -1,6 +1,6 @@
 # docker-ubuntu-hardened
 Dockerized Meson Network Node with amd64 support
-
+[![Docker Image CI](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml)
 ---------------------------
 
 ### Docker Container Setup
