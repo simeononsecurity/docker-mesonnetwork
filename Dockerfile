@@ -18,7 +18,7 @@ ENV https_port="443"
 ENV cache_size='20'
 
 # Update Packages
-RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y wget curl
+RUN apt-get update && apt-get -y full-upgrade -y && apt-get -y install wget curl
 
 #Install node software and run
 RUN chmod +x ./dockersetup.sh && cat ./dockersetup.sh
