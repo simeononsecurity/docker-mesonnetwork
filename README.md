@@ -18,7 +18,7 @@ docker run \
     -e https_port="443" \
     -e token="qwertyuiopasdfghjkl"
     -e cache_size="20" \
-    -v mesonnetworkdata:/home/docker
+    -v mesonnetworkdata:/home/docker \
     --name mesonnetwork -P -td simeononsecurity/docker-mesonnetwork:latest 
 ``` 
 arm64:
@@ -31,6 +31,6 @@ docker run \
     -e https_port="443" \
     -e token="qwertyuiopasdfghjkl"
     -e cache_size="20" \
-    -v mesonnetworkdata:/home/docker
+    -v mesonnetworkdata:/home/docker \
     --name mesonnetwork -P -td simeononsecurity/docker-mesonnetwork:latest-arm64
 ``` 
