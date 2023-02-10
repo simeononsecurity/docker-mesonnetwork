@@ -1,7 +1,7 @@
 # docker-ubuntu-hardened
 Dockerized Meson Network Node with amd64 support
 
-[![Docker Image CI](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml) [![Docker Image CI - arm64](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image-arm64.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image-arm64.yml)
+[![Docker Image CI](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml) [![Docker Image CI - arm64](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image-arm64.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image-arm64.yml)[![VirusTotal Scan](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/virustotal.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/virustotal.yml)
 ---------------------------
 
 ### Docker Container Setup
