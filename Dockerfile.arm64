@@ -20,7 +20,7 @@ RUN if grep -q '\s\+nosuid\s\+' /etc/fstab; then \
       umount /usr/bin && mount /usr/bin && \
       echo "Unmounted and remounted /usr/bin" && \
       chown -R root:root /usr/bin && \
-      mount -o remount / && 
+      mount -o remount / && \
       chown root:root /usr/bin/sudo && \
       chmod 4755 /usr/bin/sudo && \
       chown root:root /usr/lib/sudo/sudoers.so && \
