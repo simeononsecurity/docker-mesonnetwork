@@ -40,12 +40,10 @@ jobs:
           platforms: linux/arm64
           file: Dockerfile.arm64
           cache-from: |
-            type=gha .
             type=inline .
             simeononsecurity/docker-mesonnetwork:arm64-cache
             type=registry,ref=simeononsecurity/docker-mesonnetwork:arm64-latest
           cache-to: |
-            type=gha .
             type=inline .
             simeononsecurity/docker-mesonnetwork:arm64-cache
             type=registry,ref=simeononsecurity/docker-mesonnetwork:arm64-latest
