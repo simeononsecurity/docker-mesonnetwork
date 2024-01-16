@@ -37,15 +37,12 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/arm64
-          file: Dockerfile.arm64
-          cache-from: |
-            type=gha .
-            type=inline .
-            simeononsecurity/docker-mesonnetwork:arm64-latest
-            type=registry,ref=simeononsecurity/docker-mesonnetwork:arm64-latest
-          cache-to: |
-            type=registry,ref=simeononsecurity/docker-mesonnetwork:arm64-latest
+          sbom: true
+          provenance: mode=max
+          outputs: type=registry
+          platforms: |
+            linux/arm64
+          file: Dockerfile
           tags: simeononsecurity/docker-mesonnetwork:arm64-latest, ghcr.io/simeononsecurity/docker-mesonnetwork:arm64-latest
           github-token: ${{ secrets.PAT_TOKEN }}
 
