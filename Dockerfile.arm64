@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:focal
 
 LABEL org.opencontainers.image.source="https://github.com/simeononsecurity/docker-mesonnetwork"
 LABEL org.opencontainers.image.description="Dockerized Meson Network Node with amd64 support"
@@ -31,7 +31,7 @@ RUN if grep -q '\s\+nosuid\s\+' /etc/fstab; then \
 #set up sudo user as mesonnetwork install requires sudo
 RUN adduser --disabled-password --gecos '' docker && adduser docker sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-USER docker
+#USER docker
 
 #copy installer script
 COPY dockersetup.sh ./
