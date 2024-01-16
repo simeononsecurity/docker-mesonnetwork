@@ -16,7 +16,6 @@ RUN apt-get update && apt-get -y --no-install-recommends full-upgrade -y && apt-
 #set up sudo user as mesonnetwork install requires sudo
 RUN adduser --disabled-password --gecos '' docker && adduser docker sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-RUN usermod -aG docker $USER
 USER docker
 
 #copy installer script
