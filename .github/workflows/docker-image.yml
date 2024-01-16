@@ -39,12 +39,10 @@ jobs:
           platforms: linux/amd64
           file: Dockerfile
           cache-from: |
-            type=gha .
             type=inline .
             simeononsecurity/docker-mesonnetwork:cache
             type=registry,ref=simeononsecurity/docker-mesonnetwork:latest
           cache-to: |
-            type=gha .
             type=inline .
             simeononsecurity/docker-mesonnetwork:cache
             type=registry,ref=simeononsecurity/docker-mesonnetwork:latest
