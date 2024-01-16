@@ -14,8 +14,9 @@ EXPOSE 443
 RUN apt-get update && apt-get -y --no-install-recommends full-upgrade -y && apt-get -y --no-install-recommends install wget curl sudo dumb-init
 
 #set up sudo user as mesonnetwork install requires sudo
-RUN adduser --disabled-password --gecos '' docker && adduser docker sudo && \
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&
+RUN adduser --disabled-password --gecos '' docker && adduser docker sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN sudo usermod -aG docker $USER
 USER docker
 
 #copy installer script
