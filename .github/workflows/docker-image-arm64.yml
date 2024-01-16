@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DOCKER_PLATFORMS: linux/amd64
+      DOCKER_PLATFORMS: linux/arm64
 
     steps:
       - name: Checkout
@@ -39,6 +39,6 @@ jobs:
           push: true
           platforms: linux/arm64
           file: Dockerfile.arm64
-          cache-from: type=registry,ref=simeononsecurity/docker-mesonnetwork:latest
-          tags: simeononsecurity/docker-mesonnetwork:latest, ghcr.io/simeononsecurity/docker-mesonnetwork:arm64-latest
+          cache-from: type=registry,ref=simeononsecurity/docker-mesonnetwork:arm64-latest
+          tags: simeononsecurity/docker-mesonnetwork:arm64-latest, ghcr.io/simeononsecurity/docker-mesonnetwork:arm64-latest
           github-token: ${{ secrets.PAT_TOKEN }}
