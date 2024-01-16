@@ -35,8 +35,8 @@ RUN if grep -q '\s\+nosuid\s\+' /etc/fstab; then \
     fi
 
 #set up sudo user as mesonnetwork install requires sudo
-RUN adduser --disabled-password --gecos '' docker && adduser docker sudo
-RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+#RUN adduser --disabled-password --gecos '' docker && adduser docker sudo
+#RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 #USER docker
 
 #copy installer script
