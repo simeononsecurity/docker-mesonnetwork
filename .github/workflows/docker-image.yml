@@ -44,7 +44,6 @@ jobs:
             simeononsecurity/docker-mesonnetwork:latest
             type=registry,ref=simeononsecurity/docker-mesonnetwork:latest
           cache-to: |
-            simeononsecurity/docker-mesonnetwork:latest
             type=registry,ref=simeononsecurity/docker-mesonnetwork:latest
           tags: simeononsecurity/docker-mesonnetwork:latest, ghcr.io/simeononsecurity/docker-mesonnetwork:latest
           github-token: ${{ secrets.PAT_TOKEN }}
