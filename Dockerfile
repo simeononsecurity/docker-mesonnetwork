@@ -29,7 +29,7 @@ ENV https_port="443"
 ENV cache_size='20'
 
 #fix permissions on node software
-RUN sudo chmod +x ./dockersetup.sh && cat ./dockersetup.sh
+RUN chmod +x ./dockersetup.sh && cat ./dockersetup.sh
 
 ENTRYPOINT [ "/bin/bash" ]
 CMD ["dockersetup.sh"]
