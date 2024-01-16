@@ -42,10 +42,10 @@ jobs:
           cache-from: |
             type=gha .
             type=inline .
-            simeononsecurity/docker-mesonnetwork:arm64-cache
+            simeononsecurity/docker-mesonnetwork:arm64-latest
             type=registry,ref=simeononsecurity/docker-mesonnetwork:arm64-latest
           cache-to: |
-            simeononsecurity/docker-mesonnetwork:arm64-cache
+            simeononsecurity/docker-mesonnetwork:arm64-latest
             type=registry,ref=simeononsecurity/docker-mesonnetwork:arm64-latest
           tags: simeononsecurity/docker-mesonnetwork:arm64-latest, ghcr.io/simeononsecurity/docker-mesonnetwork:arm64-latest
           github-token: ${{ secrets.PAT_TOKEN }}
