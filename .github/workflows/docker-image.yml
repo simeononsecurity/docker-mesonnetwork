@@ -32,6 +32,7 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64
           tags: simeononsecurity/docker-mesonnetwork:latest
 
       - name: Login to GitHub Container Registry
