@@ -20,11 +20,18 @@ jobs:
         id: buildx
         with:
           install: true
-      - name: Build Docker Image
-        env:
-          DOCKER_BUILDKIT: 1
+      - name: Extract Docker Daemon Config
         run: |
-          echo '{"no-new-privileges": false}' | sudo tee /etc/docker/daemon.json
+          sudo cp /etc/docker/daemon.json /tmp/daemon.json
+        continue-on-error: true
+
+      - name: Modify Docker Daemon Config
+        run: |
+          jq '. += {"no-new-privileges": false}' /tmp/daemon.json > /etc/docker/daemon.json
+        continue-on-error: true
+
+      - name: Restart Docker
+        run: |
           sudo systemctl restart docker
       - name: Login to DockerHub
         uses: docker/login-action@v2
