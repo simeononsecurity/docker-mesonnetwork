@@ -27,7 +27,7 @@ jobs:
 
       - name: Modify Docker Daemon Config
         run: |
-          jq '. += {"no-new-privileges": false}' /tmp/daemon.json > /etc/docker/daemon.json
+          sudo jq '. += {"no-new-privileges": false}' /tmp/daemon.json > /etc/docker/daemon.json
         continue-on-error: true
 
       - name: Restart Docker
