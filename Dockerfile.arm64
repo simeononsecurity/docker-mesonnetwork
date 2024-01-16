@@ -13,6 +13,20 @@ EXPOSE 443
 # Update Packages
 RUN apt-get update && apt-get -y --no-install-recommends full-upgrade -y && apt-get -y --no-install-recommends install wget curl sudo dumb-init
 
+# Fix 'nosuid' issue in /etc/fstab, unmount and remount
+RUN if grep -q '\s\+nosuid\s\+' /etc/fstab; then \
+      cp /etc/fstab /etc/fstab.backup && \
+      sed -i 's/\(\s\+nosuid\s\+\)//' /etc/fstab && \
+      umount /usr/bin && mount /usr/bin && \
+      echo "Unmounted and remounted /usr/bin" && \
+      chown -R root:root /usr/bin && \
+      echo "Changed ownership of /usr/bin to root:root" && \
+      echo "Removed 'nosuid' option from /etc/fstab" && \
+      echo "Original /etc/fstab backed up to /etc/fstab.backup"; \
+    else \
+      echo "'nosuid' option is not present in /etc/fstab"; \
+    fi
+
 #set up sudo user as mesonnetwork install requires sudo
 RUN adduser --disabled-password --gecos '' docker && adduser docker sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
