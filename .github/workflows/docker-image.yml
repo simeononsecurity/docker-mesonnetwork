@@ -38,6 +38,15 @@ jobs:
           push: true
           platforms: linux/amd64
           file: Dockerfile
-          cache-from: type=registry,ref=simeononsecurity/docker-mesonnetwork:latest
+          cache-from: |
+            type=gha .
+            type=inline .
+            simeononsecurity/docker-mesonnetwork:cache
+            type=registry,ref=simeononsecurity/docker-mesonnetwork:latest
+          cache-to: |
+            type=gha .
+            type=inline .
+            simeononsecurity/docker-mesonnetwork:cache
+            type=registry,ref=simeononsecurity/docker-mesonnetwork:latest
           tags: simeononsecurity/docker-mesonnetwork:latest, ghcr.io/simeononsecurity/docker-mesonnetwork:latest
           github-token: ${{ secrets.PAT_TOKEN }}
