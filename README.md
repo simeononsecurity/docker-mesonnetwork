@@ -1,7 +1,7 @@
 # docker-ubuntu-hardened
 Dockerized Meson Network Node with amd64 support
 
-[![Docker Image CI](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml) [![Docker Image CI - arm64](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image-arm64.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image-arm64.yml)[![VirusTotal Scan](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/virustotal.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/virustotal.yml)
+[![Sponsor](https://img.shields.io/badge/Sponsor-Click%20Here-ff69b4)](https://github.com/sponsors/simeononsecurity) [![Docker Image CI](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image.yml) [![Docker Image CI - arm64](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image-arm64.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/docker-image-arm64.yml)[![VirusTotal Scan](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/virustotal.yml/badge.svg)](https://github.com/simeononsecurity/docker-mesonnetwork/actions/workflows/virustotal.yml)
 
 [DockerHub](https://hub.docker.com/r/simeononsecurity/docker-mesonnetwork)
 ---------------------------
